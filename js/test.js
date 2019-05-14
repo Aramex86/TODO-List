@@ -27,12 +27,19 @@ function addData() {
         changeText.setAttribute("class", "wrap_input");
         changeText.setAttribute("placeholder", "Type Here");
     }
-    
+    ////////HERE I STOP
+    var items = document.querySelector(".itemtext");
+    var children = items.childElementCount;
+    var chilArr = []
+    chilArr.push(children);
+    console.log(chilArr);
+    ////////////
 }
 
 //clear input after filing
 function clearInput(){
     document.getElementById("input").value="";
+    
     
 }
 //header day and date
