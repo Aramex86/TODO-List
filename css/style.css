@@ -31,9 +31,10 @@ body {
     border-radius: 5px;
     background-color: #ffffff;
 }
-@media only screen and (max-width:768px){
-    .wrap-elem{
-        width: 65%;
+
+@media only screen and (max-width:768px) {
+    .wrap-elem {
+        width: 90%;
     }
 }
 
@@ -57,20 +58,23 @@ body {
     border-bottom: 1px solid gainsboro;
     font-family: roboto, sans-serif;
 }
-.item:hover::before{
+
+.item:hover::before {
     content: "";
     display: block;
     width: 3px;
     height: 100%;
     background-color: #6765f5;
 }
-.item:hover{
+
+.item:hover {
     background-color: rgb(243, 243, 243);
 }
-.itemtext{
+
+.itemtext {
     padding: 0 2rem;
     color: rgba(19, 18, 18, 0.603);
-    font-family: roboto,sans-serif;
+    font-family: roboto, sans-serif;
     font-weight: 700;
     /*color: #c5c5c5;   when is cliked*/
 }
@@ -95,8 +99,9 @@ body {
     font-weight: bold;
     letter-spacing: 2px;
 }
-@media only screen and (max-width:768px){
-    #day{
+
+@media only screen and (max-width:768px) {
+    #day {
         font-size: 2.2rem;
     }
 }
@@ -135,16 +140,16 @@ body {
     border-bottom: 1px solid gainsboro;
     padding: 1.3rem 10px;
     padding-bottom: 5px;
-    color: #8d8d8d; 
+    color: #8d8d8d;
 }
 
 .wrap_input:focus {
     border-bottom: 2px solid #a9a8ff;
     outline: none;
     transition: all .5s ease;
-    color: #8d8d8d; 
+    color: #8d8d8d;
     text-transform: uppercase;
-    font-family: roboto,sans-serif; 
+    font-family: roboto, sans-serif;
 }
 
 ::placeholder {
@@ -153,7 +158,8 @@ body {
     font-family: roboto, sans-serif;
 
 }
-.bla::placeholder{
+
+.bla::placeholder {
     color: rgba(255, 57, 57, 0.712);
     text-transform: uppercase;
     font-family: roboto, sans-serif;
@@ -176,10 +182,11 @@ body {
     top: 24%;
     outline: none;
 }
+
 @media only screen and (max-width:1024px) {
-    .btn{
-        width: 35px;
-        height: 35px;
-        top: 47%;
+    .btn {
+        width: 40px;
+        height: 40px;
+        top: 41%;
     }
 }
