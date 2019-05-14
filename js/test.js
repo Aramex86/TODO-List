@@ -75,6 +75,6 @@ var thisMonth = new Date();
 var curentMonth = months[thisMonth.getMonth()];
 document.getElementById("month").innerHTML=curentMonth;
 
-// nr of tasks
+
 
 
