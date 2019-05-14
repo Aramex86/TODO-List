@@ -1,14 +1,16 @@
 var addName = document.getElementById('input');
 
+
 function addData() {
     var addItem = document.createElement("li");
     var itemText = document.createElement("span");
 
     itemText.setAttribute("class", "itemtext");
     addItem.setAttribute('class', 'item');
+    addItem.setAttribute('onclick','add()');
 
     var wrap = document.querySelector(".my-list");
-    var itemlist = document.querySelector(".item");
+    
 
     wrap.append(addItem);
     var addDat = addName.value;
@@ -19,21 +21,32 @@ function addData() {
         var changeText = document.getElementById("input");
         changeText.setAttribute("class", "wrap_input bla");
         changeText.setAttribute("placeholder", "MUST FILL");
-        addItem.style.display = "none";
-
+        addItem.remove();
 
     } else {
         var changeText = document.getElementById("input");
         changeText.setAttribute("class", "wrap_input");
         changeText.setAttribute("placeholder", "Type Here");
     }
-    ////////HERE I STOP
-    var items = document.querySelector(".itemtext");
-    var children = items.childElementCount;
-    var chilArr = []
-    chilArr.push(children);
-    console.log(chilArr);
-    ////////////
+    taskCount();
+    
+}
+//add event to itemList///////////////
+function add(){
+    const addClass = document.querySelector(".item");
+    addClass.remove(this);
+    taskCount();
+}
+
+
+
+////////Task Counter
+function taskCount(){
+    var items = document.querySelector(".my-list");
+    var childrenItem = items.childElementCount;
+    var chilArr = [];
+    chilArr.push(childrenItem);
+    document.querySelector(".tasknr").innerHTML = chilArr;
 }
 
 //clear input after filing

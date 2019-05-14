@@ -31,6 +31,11 @@ body {
     border-radius: 5px;
     background-color: #ffffff;
 }
+@media only screen and (max-width:768px){
+    .wrap-elem{
+        width: 65%;
+    }
+}
 
 /*list component*/
 .my-list {
@@ -83,10 +88,17 @@ body {
     border-radius: 5px 5px 0 0;
 }
 
+
+
 #day {
     font-size: 2.5rem;
     font-weight: bold;
     letter-spacing: 2px;
+}
+@media only screen and (max-width:768px){
+    #day{
+        font-size: 2.2rem;
+    }
 }
 
 #month {
@@ -163,4 +175,11 @@ body {
     position: absolute;
     top: 24%;
     outline: none;
+}
+@media only screen and (max-width:1024px) {
+    .btn{
+        width: 35px;
+        height: 35px;
+        top: 47%;
+    }
 }
