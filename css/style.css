@@ -10,7 +10,6 @@ body {
     background: linear-gradient(45deg, red, blue) no-repeat;
     font-family: roboto, sans-serif;
     height: 100vh;
-    background: cover;
 }
 
 .wrap {
@@ -32,9 +31,9 @@ body {
     background-color: #ffffff;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (min-width:360px) and (max-width:768px) {
     .wrap-elem {
-        width: 90%;
+        width: 100%;
     }
 }
 
@@ -53,6 +52,7 @@ body {
     margin: 2px 0 0 0;
     text-transform: capitalize;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     font-size: 1.5rem;
     border-bottom: 1px solid gainsboro;
@@ -76,20 +76,38 @@ body {
     color: rgba(19, 18, 18, 0.603);
     font-family: roboto, sans-serif;
     font-weight: 700;
+    display: block;
+    width: 75%;
     /*color: #c5c5c5;   when is cliked*/
+}
+.close{
+    width: 15px;
+    height: 15px;
+    border: 2px solid rgba(128, 128, 128, 0.55);
+    margin-right: 18px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 2.5rem;
+    color: rgba(128, 128, 128, 0.55);
+    line-height: 15px;
+    transform: rotate(134deg);
+    cursor: pointer;
 }
 
 
 /*head component*/
 .head {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     font-size: 1.5rem;
     color: #6765f5;
     background-color: rgb(253, 253, 253);
     width: 100%;
     padding: 3rem 0;
     border-radius: 5px 5px 0 0;
+}
+.day-wrap{
+    padding: 0 1rem;
 }
 
 
@@ -117,6 +135,7 @@ body {
     display: flex;
     align-self: center;
     font-size: 1.4rem;
+    padding: 0 3rem;
 }
 
 .tasknr {
@@ -154,7 +173,7 @@ body {
 
 ::placeholder {
     text-transform: uppercase;
-    color: rgba(220, 220, 220, 0.658);
+    color: rgba(184, 184, 184, 0.658);
     font-family: roboto, sans-serif;
 
 }

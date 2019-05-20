@@ -4,17 +4,24 @@ var addName = document.getElementById('input');
 function addData() {
     var addItem = document.createElement("li");
     var itemText = document.createElement("span");
+    var closeBtn = document.createElement("div");
+
 
     itemText.setAttribute("class", "itemtext");
     addItem.setAttribute('class', 'item');
-    addItem.setAttribute('onclick','add()');
+    closeBtn.setAttribute('onclick','add()');
+    closeBtn.setAttribute("class","close");
 
     var wrap = document.querySelector(".my-list");
+    closeBtn.innerHTML = "+";
+    
+   
     
 
     wrap.append(addItem);
     var addDat = addName.value;
     addItem.append(itemText);
+    addItem.append(closeBtn);
     itemText.append(addDat);
 
     if (addDat === "") {
@@ -29,6 +36,7 @@ function addData() {
         changeText.setAttribute("placeholder", "Type Here");
     }
     taskCount();
+    itemLenght();
     
 }
 //add event to itemList///////////////
@@ -36,6 +44,7 @@ function add(){
     const addClass = document.querySelector(".item");
     addClass.remove(this);
     taskCount();
+    
 }
 
 
@@ -75,6 +84,23 @@ var thisMonth = new Date();
 var curentMonth = months[thisMonth.getMonth()];
 document.getElementById("month").innerHTML=curentMonth;
 
+///LIne length
+function itemLenght(){
+    const item = document.querySelector(".wrap_input").value;
+    if(item.length >= 40){
+       alert("IT'S TOO LONG");
+       document.querySelector('.item').style.display="none";
+    }
+}
 
+
+///Add item by press enter
+const input = document.getElementById("input");
+input.addEventListener("keypress",function(event){
+    if(event.keyCode === 13){
+        event.preventDefault();
+        document.querySelector(".btn").click();
+    }
+});
 
 
