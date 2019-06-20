@@ -9,14 +9,14 @@ function addData() {
 
     itemText.setAttribute("class", "itemtext");
     addItem.setAttribute('class', 'item');
-    closeBtn.setAttribute('onclick','add()');
-    closeBtn.setAttribute("class","close");
+    closeBtn.setAttribute('onclick', 'add()');
+    closeBtn.setAttribute("class", "close");
 
     var wrap = document.querySelector(".my-list");
     closeBtn.innerHTML = "+";
-    
-   
-    
+
+
+
 
     wrap.append(addItem);
     var addDat = addName.value;
@@ -36,21 +36,29 @@ function addData() {
         changeText.setAttribute("placeholder", "Type Here");
     }
     taskCount();
-    itemLenght();
-    
+   // inputText();
+
+
 }
 //add event to itemList///////////////
-function add(){
+function add() {
     const addClass = document.querySelector(".item");
     addClass.remove(this);
     taskCount();
-    
+}
+//input line length
+function inputText() {
+    const textLen = document.getElementById("input").value;
+    const textCount = textLen.length;
+    console.log(textCount);
+    if (textCount >=20) {
+        const text = document.getElementById("input");
+    }
 }
 
 
-
 ////////Task Counter
-function taskCount(){
+function taskCount() {
     var items = document.querySelector(".my-list");
     var childrenItem = items.childElementCount;
     var chilArr = [];
@@ -59,10 +67,10 @@ function taskCount(){
 }
 
 //clear input after filing
-function clearInput(){
-    document.getElementById("input").value="";
-    
-    
+function clearInput() {
+    document.getElementById("input").value = "";
+
+
 }
 //header day and date
 
@@ -75,32 +83,21 @@ weekday[3] = "Wednesday";
 weekday[4] = "Thursday";
 weekday[5] = "Friday";
 weekday[6] = "Saturday";
-var nrOfDay =weekday [d.getDay()];
-document.getElementById("day").innerHTML= nrOfDay;
+var nrOfDay = weekday[d.getDay()];
+document.getElementById("day").innerHTML = nrOfDay;
 
-var months = ['January','February','March','April','May','June',
-'July','August','September','October','November','December'];
+var months = ['January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'
+];
 var thisMonth = new Date();
 var curentMonth = months[thisMonth.getMonth()];
-document.getElementById("month").innerHTML=curentMonth;
-
-///LIne length
-function itemLenght(){
-    const item = document.querySelector(".wrap_input").value;
-    if(item.length >= 40){
-       alert("IT'S TOO LONG");
-       document.querySelector('.item').style.display="none";
-    }
-}
-
+document.getElementById("month").innerHTML = curentMonth;
 
 ///Add item by press enter
 const input = document.getElementById("input");
-input.addEventListener("keypress",function(event){
-    if(event.keyCode === 13){
+input.addEventListener("keypress", function (event) {
+    if (event.keyCode === 13) {
         event.preventDefault();
         document.querySelector(".btn").click();
     }
 });
-
-

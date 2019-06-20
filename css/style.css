@@ -52,7 +52,7 @@ body {
     margin: 2px 0 0 0;
     text-transform: capitalize;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
     font-size: 1.5rem;
     border-bottom: 1px solid gainsboro;
@@ -78,7 +78,6 @@ body {
     font-weight: 700;
     display: block;
     width: 75%;
-    /*color: #c5c5c5;   when is cliked*/
 }
 .close{
     width: 15px;
